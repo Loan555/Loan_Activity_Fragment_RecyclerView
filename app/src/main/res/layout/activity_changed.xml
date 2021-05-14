@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangedActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/componente_6_7" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/componente_4_3"
+            app:layout_constraintBottom_toBottomOf="@id/background_2"
+            app:layout_constraintTop_toTopOf="@id/background_2" />
+
+        <TextView
+            android:id="@+id/tite1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:text="TRADIX"
+            android:textColor="#2b2828"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toTopOf="@id/background" />
+
+        <TextView
+            android:id="@id/tite3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:fontFamily="@font/raleway_black"
+            android:gravity="center"
+            android:textColor="#656565"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/tite1"
+            tools:text="Yay! Your password has been\nchanged!" />
+
+        <TextView
+            android:id="@+id/tite_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/lato_light"
+            android:text="You can now log into your account"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toTopOf="@id/background_2" />
+
+        <ImageView
+
+            android:id="@+id/background_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/pixeltrue_special_deals"
+            app:layout_constraintTop_toBottomOf="@id/tite3" />
+
+        <View
+            android:id="@+id/coids_1"
+            android:layout_width="55dp"
+            android:layout_height="78dp"
+            android:background="@drawable/flying_coins"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/tite_4" />
+
+        <View
+            android:id="@+id/coids_2"
+            android:layout_width="55dp"
+            android:layout_height="78dp"
+            android:background="@drawable/flying_coins_2"
+            app:layout_constraintLeft_toRightOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tite_4" />
+
+
+        <TextView
+            android:id="@+id/btLogin"
+            android:layout_width="250dp"
+            android:layout_height="52dp"
+            android:layout_margin="56dp"
+            android:background="@drawable/btpink"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:paddingTop="19dp"
+            android:paddingBottom="19dp"
+            android:text="LOGIN"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/background_2" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

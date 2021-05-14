@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/componente_7_3" />
+
+        <TextView
+            android:id="@+id/tite1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:text="TRADIX"
+            android:textColor="#2b2828"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toTopOf="@id/background" />
+
+        <TextView
+            android:id="@+id/tite2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:text="The future of trading"
+            android:textColor="#171717"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/tite1" />
+
+        <TextView
+            android:id="@id/tite3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:gravity="center"
+            android:textColor="#656565"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/background_1"
+            tools:text="We have sent you an\nemail to change your\npassword" />
+
+        <ImageView
+            android:id="@+id/background_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/pixeltrue_newsletter"
+            app:layout_constraintTop_toBottomOf="@id/tite2" />
+
+        <TextView
+            android:id="@+id/btResendMail"
+            android:layout_width="250dp"
+            android:layout_height="52dp"
+            android:layout_margin="56dp"
+            android:background="@drawable/rettangolo_27_2"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:paddingTop="19dp"
+            android:paddingBottom="19dp"
+            android:text="RESEND EMAIL"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/tite3" />
+
+        <TextView
+            android:id="@+id/countNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/lato_light"
+            android:textColor="#3e3e3e"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guideline6"
+            app:layout_constraintRight_toRightOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/btResendMail"
+            android:text="Wait 30 seconds before sending it" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboarding.OnboardingFragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:clickable="true"
+        android:id="@+id/txtSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="49.9dp"
+        android:layout_marginRight="39.9dp"
+        android:fontFamily="@font/lato"
+        android:text="Skip"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSkip"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="25.2dp"
+        android:layout_marginTop="173dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/componente_5_11" />
+
+    <ImageView
+        android:layout_marginTop="31dp"
+        android:layout_below="@id/txtSkip"
+        android:adjustViewBounds="true"
+        android:id="@+id/background_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_1" />
+
+    <TextView
+        android:id="@+id/tite_1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/background_1"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/raleway_black"
+        android:text="Start to invest\nfor your future!"
+        android:textColor="#3e3e3e"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:id="@+id/tite_1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tite_1_1"
+        android:layout_marginLeft="46dp"
+        android:fontFamily="@font/lato_light"
+        android:paddingTop="8sp"
+        android:text="Ex totam praesentium incidunt aut."
+        android:textColor="#000000"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

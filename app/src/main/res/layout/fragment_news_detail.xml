@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.NewsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/componente_6_1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@color/noColor"
+            android:src="@drawable/icons_8_expand_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_head"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/raleway_black"
+            android:text="EDITORIAL NEWS"
+            android:textColor="#121212"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_head"
+            app:layout_constraintLeft_toRightOf="@id/backspace"
+            app:layout_constraintTop_toTopOf="@id/guideline_head" />
+
+        <ImageButton
+            android:id="@+id/menu_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@color/noColor"
+            android:src="@drawable/icons_8_menu_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_head"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_head" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/tite_bar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_head">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/raggruppa_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_menu" />
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="22dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_main">
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_text_green"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="CRYPTOCURRENCY"
+                    android:textColor="#0a0909"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title1"
+                    android:layout_alignParentRight="true"
+                    android:background="#CD6021EA"
+                    android:fontFamily="@font/raleway_black"
+                    android:gravity="center|right"
+                    android:maxWidth="200dp"
+                    android:paddingLeft="10dp"
+                    android:text="What is the future of cryptocurrencies?"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/calenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title1"
+                    android:src="@drawable/icons_8_calendar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calenda"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="02 Set 2020"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center|left"
+                    android:text="Rem deserunt voluptatem sapiente. Quod sint officiis quae magnam. Qui eaque atque quia.  Incidunt dolor reiciendis tenetur libero error consequatur voluptate recusandae. Sequi voluptatum quas. \n\n  Ullam voluptatem reprehenderit ea commodi. Doloremque autem praesentium qui harum quia sunt voluptatem eius at.
+                   Voluptates voluptatem eaque et voluptas maxime molestiae et. Et saepe perferendis ut quidem et est. Rem deserunt voluptatem sapiente. Quod sint officiis quae magnam. Qui eaque atque quia. Incidunt dolor reiciendis tenetur libero error consequatur voluptate recusandae. Sequi voluptatum quas. Ullam voluptatem reprehenderit ea commodi. Doloremque autem praesentium qui harum quia sunt voluptatem eius at. Voluptates voluptatem eaque et voluptas maxime molestiae et. Et saepe perferendis ut quidem et est. "
+                    android:textColor="#000000"
+                    android:textSize="13sp" />
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

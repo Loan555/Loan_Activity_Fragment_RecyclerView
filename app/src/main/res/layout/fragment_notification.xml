@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".home.NotificationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24.5dp">
+
+        <ImageButton
+            android:id="@+id/notification_bt"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:background="@color/black"
+            android:src="@drawable/icons_8_alarm" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
