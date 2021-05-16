@@ -71,10 +71,12 @@ class HomeFragment : Fragment() {
                 when (direction) {
                     ItemTouchHelper.LEFT -> {
                         listProduct.removeAt(positionOfData)
+                        listProductView.removeAt(positionOfData)
                         adapterProduct.notifyItemRemoved(viewHolder.layoutPosition)
                     }
                     ItemTouchHelper.RIGHT -> {
                         listProduct.removeAt(positionOfData)
+                        listProductView.removeAt(positionOfData)
                         adapterProduct.notifyItemRemoved(viewHolder.layoutPosition)
                     }
 
@@ -108,26 +110,27 @@ class HomeFragment : Fragment() {
         var product1 = Product("DOWN JONES", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)")
         listProduct = ArrayList<Product>()
         listProductView = ArrayList<Product>()
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
-        listProduct.add(product1)
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
+        listProduct.add(Product("DOWN JONES + ${listProduct.size}", "NYSE", "10:44:45", "20.047,50", "+203 (+1,04%)"))
 
         addMore()
+        Log.d("aaa","list sum = ${listProduct.size}")
     }
 
     fun addMore(){

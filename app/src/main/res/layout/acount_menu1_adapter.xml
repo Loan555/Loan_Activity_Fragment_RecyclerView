@@ -9,12 +9,13 @@
     android:paddingBottom="7dp">
 
     <ImageView
+        android:padding="9dp"
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:background="@drawable/bt"
-        android:src="@drawable/alert" />
+        android:src="@drawable/icons_8_alarm" />
 
     <TextView
         android:id="@+id/name_icon"

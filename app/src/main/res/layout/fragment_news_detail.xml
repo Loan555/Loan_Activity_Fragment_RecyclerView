@@ -30,6 +30,7 @@
             app:layout_constraintTop_toTopOf="@id/guideline_head" />
 
         <TextView
+            android:id="@+id/content_news"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

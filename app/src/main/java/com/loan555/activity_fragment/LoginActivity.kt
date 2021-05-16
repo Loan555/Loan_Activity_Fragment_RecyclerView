@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.loan555.activity_fragment.home.HomeActivity
+import com.loan555.activity_fragment.onboarding.AppPreferences
 import kotlinx.android.synthetic.main.activity_login.*
 
 const val REQEST_CODE_SIGN_UP = 1
@@ -16,6 +17,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        AppPreferences.firstRun = false
+        Log.d("SpinKotlin", "The value of our pref is: ${AppPreferences.firstRun}")
+
         btSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivityForResult(intent, REQEST_CODE_SIGN_UP)
@@ -24,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         btLogin.setOnClickListener {
             if (checkLogin()) {
                 val mIntent = Intent(this, HomeActivity::class.java)
+                finish()
                 startActivity(mIntent)
             } else {
                 Toast.makeText(this, "Đăng nhập thất bại!", Toast.LENGTH_SHORT).show()

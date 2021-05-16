@@ -16,7 +16,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_200"
         android:paddingBottom="72dp">
 
         <ImageButton
@@ -45,10 +44,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_type_menu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="92dp"
             android:background="@drawable/tite_bar"
-            app:layout_constraintTop_toBottomOf="@id/guideline_head" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_head"

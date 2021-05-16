@@ -16,7 +16,7 @@ class MenuAdapter(
     private var list3: MutableList<Object1>,
     private var list4: MutableList<Object2>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var temp: Int = 0
+    var countList: Int = 0
 
     inner class ViewTypeViewHolder1(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(text: String, reSrcId: Int) {
@@ -95,8 +95,9 @@ class MenuAdapter(
                 list3[position - list.size - list2.size].txt,
                 list3[position - list.size - list2.size].image
             )
-            is ViewTypeViewHolder4 -> holder.bind(list4[0].txt)
-
+            is ViewTypeViewHolder4 -> holder.bind(
+                list3[position - list.size - list2.size].txt
+            )
         }
     }
 
@@ -108,6 +109,7 @@ class MenuAdapter(
         return when (position) {
             in 0 until list.size -> ViewType.TYPE_1.type
             in list.size until list.size + list2.size -> ViewType.TYPE_2.type
+            5,10 ->ViewType.TYPE_4.type
             else -> ViewType.TYPE_3.type
         }
     }

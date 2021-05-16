@@ -1,17 +1,22 @@
 package com.loan555.activity_fragment.home
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.loan555.activity_fragment.R
 import com.loan555.activity_fragment.home.adapter.ItemAdapter
 import com.loan555.activity_fragment.home.adapter.NewsAdapter
 import kotlinx.android.synthetic.main.fragment_news.*
 
-class NewsFragment : Fragment() {
+class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
 
     private lateinit var menuList: ArrayList<String>
     private lateinit var newsList: ArrayList<News>
@@ -44,7 +49,7 @@ class NewsFragment : Fragment() {
 
     private fun initNewsList() {
 
-        newAdapter = NewsAdapter(newsList)
+        newAdapter = NewsAdapter(newsList, this)
         recycler_view_news.adapter = newAdapter
         recycler_view_news.layoutManager =
             LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
@@ -73,4 +78,14 @@ class NewsFragment : Fragment() {
         newsList.add(news1)
         newsList.add(news1)
     }
+
+    override fun onItemClick(position: Int) {
+        Log.d("aaa", newsList[position].contentTitle)
+        this.activity?.intent?.putExtra("TITLE",newsList[position].contentTitle)
+        activity?.supportFragmentManager?.commit {
+            replace<NewsDetailFragment>(R.id.fragment_container_view_home)
+            addToBackStack("Detail_home")
+        }
+    }
+
 }
